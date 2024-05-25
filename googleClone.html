@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+
+    <style>
+        .icon{
+            width: 100%;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin:0 auto;
+            padding: 0.2rem;
+            /* border:3px solid black; */
+            align-items: center;
+            align-content: space-between;
+        }
+
+        .icontent{
+            /* border: 5px solid purple; */
+            display: flex;
+            flex-direction: row;
+          
+        }
+
+        .a-tag-gmail{
+            text-decoration: none;
+            color: black;
+            font-size:1rem;
+        }
+        
+        .a-tag-gmail:hover{
+            text-decoration: underline; 
+            color: rgb(4, 4, 32);
+        }
+
+
+        .a-tag-images{
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+        
+        }
+
+        .a-tag-images:hover{
+            text-decoration: underline; 
+            color: rgb(4, 4, 32);
+        }
+
+        .gml-text-div{
+            /* border: 1px solid red; */
+            margin: 0.5rem;
+            padding: 0.2rem;
+        }
+
+        .img-text-div{
+            /* border: 1px solid red; */
+            margin: 0.5rem;
+            padding: 0.2rem;
+        }
+
+        .three-dot-icon{
+            width: 1.5rem;
+        }
+
+        .icon-dot{
+           /* border: 2px solid red; */
+           margin: 0.2rem;
+           padding: 0.3rem;
+        }
+
+
+        .button-signin-div{
+            /* border: 1px solid red; */
+            width: 6rem;
+            text-align: center;
+            margin: 0.2rem;
+            background-color: rgb(26,115,232);
+            border-radius: 0.3rem;
+        }
+
+        .button-sign-in{
+            width: 100%;
+            border: none;
+            background-color: rgb(26,115,232);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.3rem;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+        }
+
+        .button-signin-div:hover{
+            background-color: rgb(37, 89, 156);
+        }
+
+        .button-sign-in:hover{
+            background-color: rgb(37, 89, 156);
+        }
+
+        .google-div{
+            /* border: 3px solid red; */
+            margin:0.1rem;
+            padding:0.2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .googleimg{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+
+        .search-icon{
+            /* border: 2px solid red ; */
+            width: 1.2rem;
+            margin: 5px;
+            
+            
+            }
+
+            .searchlogo-div{
+                /* border: 2px solid brown; */
+                width:1rem ;
+                display: flex;
+                align-items: center;
+                /* margin: 0.2rem auto 0.1rem 0.1rem; */
+            }
+
+        .voice-icon{
+            /* border: 2px solid red ; */
+            width: 2rem;
+            height: 2rem;
+            /* margin: 0.5rem 3.5rem ; */
+            
+        }
+
+        .imagesearch-icon{
+            /* border: 2px solid red ; */
+            width: 2.5rem;
+            height: 1.5rem;
+            margin: 0.5 3.5rem;
+            
+        }
+        
+
+        .more-input-div{
+            /* border: 2px solid brown; */
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 14px;
+            font-family:arial, sans-serif;
+            cursor: pointer;
+            margin: 11px 4px;
+            height: 36px;
+        }
+  
+        .google-text{
+            /* border: 2px solid green; */
+            border-radius: 3px;
+            width: 10%;
+            margin: 0.2rem 0.5rem;
+            padding: 0.3rem;
+            text-align: center;
+
+        }
+      
+        .google-text:hover{
+            box-shadow: 0.5px 0.3px 0.5px 0.3px grey;
+        }
+            
+        
+
+        .feeling-lucky{
+            /* border: 2px solid green; */
+            border-radius: 3px;
+            width: 10%;
+            margin: 0.2rem 0.5rem;
+            padding: 0.3rem;
+            text-align: center;
+        }
+
+        .feeling-lucky:hover{
+            box-shadow: 0.5px 0.3px 0.5px 0.3px grey;
+        }
+
+        .offeredin-div{
+            /* border: 2px solid brown; */
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 14px;
+            font-family:arial, sans-serif;
+            cursor: pointer;
+            margin: 8px 4px;
+            height: 36px;
+            width:100%;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .hausa-link{
+            text-decoration: none;
+            padding: 0.3rem;
+            color: rgb(100,13,171) ;
+        }
+
+        .hausa-link:hover{
+            text-decoration: underline;
+        }
+
+      
+        .igbo-link{
+            text-decoration: none;
+            padding: 0.3rem;
+            color: rgb(100,13,171)
+        }
+
+        .igbo-link:hover{
+            text-decoration: underline;
+        }
+
+        .edeyoruba-link{
+            text-decoration: none;
+            padding: 0.3rem;
+            color: rgb(100,13,171)
+        }
+        
+        .edeyoruba-link:hover{
+            text-decoration: underline;
+        }
+
+        .Nigerian-pid{
+            text-decoration: none;
+            padding: 0.3rem;
+            color: rgb(100,13,171)
+        }
+
+        .Nigerian-pid:hover{
+            text-decoration: underline;
+        }
+
+        .third-section{
+            /* border: 2px solid red; */
+            /* width: 80%; */
+            height: 4rem;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            width:100% ;
+            box-sizing: border-box;
+            
+            
+        }
+
+        .Nation{
+            /* border: 1px solid red; */
+            font-size: 16px;
+            /* margin: 1.5rem; */
+            font-family:arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            /* height: 90%; */
+            align-items: center;
+            height: 80vh;
+            width: 100%;
+            background-color: whitesmoke;
+            border-bottom: 2px grey;
+            
+           
+        }
+
+        .climate-div{
+            /* border: 3px solid red; */
+            margin: 2rem;
+            font-size: 14px;
+            font-family:arial, sans-serif;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+           
+            
+        }
+
+        .lfi{
+            color: black;
+            text-decoration: none;
+        }
+
+        .lfi:hover{
+            text-decoration: underline;
+        }
+
+
+
+        .leafw{
+            /* border: 2px red solid; */
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .looking-div{
+            border: 0.5px solid rgb(228, 221, 221);
+            width: 50%;
+            margin: 0 auto;
+            border-radius: 22rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            height:3rem ;
+        
+           
+        }
+
+        .looking-div:hover{
+           box-shadow: 2px white;
+        
+        }
+
+
+        .other-icons{
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-around;
+            width: 15%;
+        }
+
+
+        .abt{
+            font-size: 14px;
+            margin: 1.5rem;
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none;
+            
+            
+        }
+        
+
+        .abt:hover{
+            text-decoration: underline;
+        }
+
+        .advert{
+            font-size: 14px;
+            margin: 1.5rem;
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none; 
+        }
+
+        .advert:hover{
+            text-decoration: underline;
+        }
+
+        .Buzin{
+            font-size: 14px;
+            margin: 1.5rem;
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none; 
+        }
+
+        .Buzin:hover{
+            text-decoration: underline;
+        }
+
+        .search-works{
+            font-size: 14px;
+            margin: 1.5rem;
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none; 
+        }
+
+        .search-works:hover{
+            text-decoration: underline;
+        }
+
+        .priv{
+            font-size: 14px;
+            margin: 1.5rem;
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none; 
+        }
+
+        .priv:hover{
+            text-decoration: underline;
+        }
+
+        .temz{
+            font-size: 14px;
+            margin: 1.5rem;
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none; 
+        }
+        
+        .temz:hover{
+            text-decoration: underline;
+        }
+
+        .sett{
+            font-size: 14px;
+            /* margin: 1.5rem; */
+            font-family:arial, sans-serif;
+            color: black;
+            text-decoration: none;   
+        }
+
+        .sett:hover{
+            text-decoration: underline;
+        }
+
+        .voice-icon-div{
+            /* border: 2px solid brown; */
+            width: 1.2rem;
+            height: 2rem;
+        }
+
+        .searchfor{
+            /* width: 30rem; */
+            /* height: 2.5rem; */
+            /* margin: 0.5rem auto; */
+            /* text-decoration: none; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border: 1px solid white;
+            
+        }
+
+       
+
+        .inputsearch{
+            width: 31.2rem;
+            /* height: 1.5rem; */
+            /* margin: 0.5rem auto; */
+            text-decoration: none;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            /* border: 2px solid blue; */
+            border: none;
+            outline: none;
+        }
+
+        .srch-div{
+            width: 31.2rem;
+            height: 1.5rem;
+            /* border: 1px solid  red;  */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0.3rem auto;
+           
+        }
+
+        .looking-div:hover{
+            box-shadow: 1px 0.5px 1px grey;
+
+        }
+
+        .favlinks-div{
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-between;
+            height: 90%;
+            align-items: center;
+            width: 100%;
+            border-top: 1px solid grey;
+            background-color: whitesmoke;
+            
+        
+
+        }
+
+        .privacy-div{
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .aabh{
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .second-section{
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body class="body">
+   
+    <div class="icon">
+        <div class="icontent">
+            <div class="gml-text-div">
+                <a href="#" class="a-tag-gmail">Gmail</a>
+            </div>
+
+            <div class="img-text-div">
+                <a href="#" class="a-tag-images">Images</a>
+            </div>
+        </div>
+
+        <div class="icon-dot">
+            <img src="../images/google icon.jpg" class="three-dot-icon">
+        </div>
+
+        <div class="button-signin-div">
+            <button class="button-sign-in">Sign In</button>
+        </div>
+    </div>
+
+    <div class="second-section">
+
+        <div class="google-div">
+            <img src="../images/GOOGLE LOGO.jpg" class="googleimg">
+        </div>
+    
+        <div class="searchfor-what-div">
+            
+            <div class="looking-div">
+
+                <div class="searchlogo-div">
+                    <img src="../images/small search icon.jpg" class="search-icon">
+                </div>
+
+                <div class="srch-div">
+                    <form action="#" class="searchfor">
+                        <input type="text" class="inputsearch">
+                    </form>
+                </div>
+
+                <div class="other-icons">
+                    <div class="voice-icon-div">
+                        <img src="../images/VOICE ICON.jpg" class="voice-icon">
+                    </div>
+
+                    <div class="imagesearch-icon-div" >
+                        <img src="../images/SEARCH ICON.jpg" class="imagesearch-icon">
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="more-input-div">
+
+            <div class="google-text">Google Search</div>
+
+            <div class="feeling-lucky">I'm Feeling Lucky</div>
+
+        </div>     
+
+        
+      <div class="offeredin-div"> 
+
+            <div class="offered">Google offered in:
+                <a class="hausa-link" href="https://www.google.com/setprefs?sig=0_hH4MxRbIYJ2cxI8T2WYhLjeMNxA%3D&hl=ha&source=homepage&sa=X&ved=0ahUKEwi7x__H442FAxXsUEEAHQw4AdUQ2ZgBCBQ">Hausa</a> 
+
+                <a class="igbo-link" href="https://www.google.com/setprefs?sig=0_hH4MxRbIYJ2cxI8T2WYhLjeMNxA%3D&hl=ig&source=homepage&sa=X&ved=0ahUKEwi7x__H442FAxXsUEEAHQw4AdUQ2ZgBCBU">Igbo</a> 
+
+                <a class="edeyoruba-link"  href="https://www.google.com/setprefs?sig=0_hH4MxRbIYJ2cxI8T2WYhLjeMNxA%3D&hl=yo&source=homepage&sa=X&ved=0ahUKEwi7x__H442FAxXsUEEAHQw4AdUQ2ZgBCBY">Èdè Yorùbá</a> 
+                
+                <a class="Nigerian-pid" href="https://www.google.com/setprefs?sig=0_hH4MxRbIYJ2cxI8T2WYhLjeMNxA%3D&hl=pcm&source=homepage&sa=X&ved=0ahUKEwi7x__H442FAxXsUEEAHQw4AdUQ2ZgBCBc">Nigerian Pidgin</a>
+            </div> 
+            
+        </div>
+
+    </div>
+
+    <div class="third-section">
+
+        <div class="Nation">
+            <p> Nigeria</p>
+        </div>
+
+
+        <div class="favlinks-div">
+
+            <div class="aabh">
+                <div class="about-div">
+                    <a href="https://about.google/?utm_source=google-NG&utm_medium=referral&utm_campaign=hp-footer&fg=1" class="abt">About</a>
+
+                </div>
+
+
+                <div class="advertising-div">
+                    <a href="https://www.google.com/intl/en_ng/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" class="advert">Advertising</a>
+
+                </div>
+
+                <div class="bussiness-div">
+                    <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" class="Buzin">Business</a>
+                </div>
+
+                <div class="How-div">
+                    <a href="https://google.com/search/howsearchworks/?fg=1" class="search-works">How Search works</a>
+                </div>
+            </div>
+
+            <div class="climate-div">
+                <img src="../images/leaf wallpaper.jpg" class="leafw"><a href="https://sustainability.google/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=" class="lfi">Our third decade of climate action: join us</a>
+            </div>
+
+
+            <div class="privacy-div">
+                <div class="priv-policy">
+                    <a href="https://policies.google.com/privacy?hl=evn-NG&fg=1" class="priv">Privacy</a>
+                </div>
+
+                <div class="terms-div">
+                    <a href="https://policies.google.com/terms?hl=en-NG&fg=1" class="temz">Terms</a>
+                </div>
+
+                <div class="setting-div">
+                    <a href="#" class="sett">Settings</a>
+                </div>
+
+            </div>   
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>
